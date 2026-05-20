@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Yarlagadda App - Official Documentation</title>
+
+  <style>
+
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+    }
+
+    body{
+      font-family: Arial, sans-serif;
+      background:#f4f6f9;
+      color:#222;
+      line-height:1.7;
+      scroll-behavior:smooth;
+    }
+
+    header{
+      background:#0b57d0;
+      color:white;
+      padding:60px 20px;
+      text-align:center;
+    }
+
+    header h1{
+      font-size:42px;
+      margin-bottom:15px;
+    }
+
+    header p{
+      font-size:18px;
+      max-width:850px;
+      margin:auto;
+    }
+
+    nav{
+      background:#ffffff;
+      position:sticky;
+      top:0;
+      z-index:1000;
+      box-shadow:0 2px 8px rgba(0,0,0,0.08);
+    }
+
+    nav ul{
+      display:flex;
+      justify-content:center;
+      flex-wrap:wrap;
+      list-style:none;
+    }
+
+    nav ul li{
+      margin:10px;
+    }
+
+    nav ul li a{
+      text-decoration:none;
+      color:#0b57d0;
+      font-weight:bold;
+      padding:10px 16px;
+      border-radius:8px;
+      transition:0.3s;
+    }
+
+    nav ul li a:hover{
+      background:#0b57d0;
+      color:white;
+    }
+
+    section{
+      max-width:1100px;
+      margin:40px auto;
+      background:white;
+      padding:40px;
+      border-radius:14px;
+      box-shadow:0 2px 10px rgba(0,0,0,0.08);
+    }
+
+    h2{
+      color:#0b57d0;
+      margin-bottom:20px;
+      font-size:32px;
+    }
+
+    h3{
+      margin-top:20px;
+      color:#333;
+    }
+
+    ul{
+      padding-left:25px;
+      margin-top:15px;
+    }
+
+    li{
+      margin-bottom:10px;
+    }
+
+    .btn{
+      display:inline-block;
+      margin-top:20px;
+      padding:12px 18px;
+      background:#0b57d0;
+      color:white;
+      text-decoration:none;
+      border-radius:8px;
+    }
+
+    .btn:hover{
+      background:#0842a0;
+    }
+
+    footer{
+      background:#111827;
+      color:white;
+      text-align:center;
+      padding:30px;
+      margin-top:50px;
+    }
+
+    .top-link{
+      margin-top:25px;
+      display:inline-block;
+    }
+
+    @media(max-width:768px){
+
+      header h1{
+        font-size:30px;
+      }
+
+      section{
+        margin:20px;
+        padding:25px;
+      }
+
+      nav ul{
+        flex-direction:column;
+        align-items:center;
+      }
+
+    }
+
+  </style>
+</head>
+
+<body>
+
+<header id="home">
+
+  <h1>Yarlagadda App</h1>
+
+  <p>
+    Official Android Application Documentation Portal for Google API,
+    Gemini AI API Verification, Privacy Policy, and Terms of Service.
+  </p>
+
+</header>
+
+<nav>
+  <ul>
+    <li><a href="#home">Home</a></li>
+    <li><a href="#documentation">Documentation</a></li>
+    <li><a href="#privacy">Privacy Policy</a></li>
+    <li><a href="#terms">Terms of Service</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
+
+<section id="documentation">
+
+  <h2>Application Documentation</h2>
+
+  <p>
+    Yarlagadda is a constituency management and citizen services Android application
+    developed for public administration, grievance management, appointments,
+    welfare services, TTD requests, AI assistance, and development monitoring.
+  </p>
+
+  <h3>Main Features</h3>
+
+  <ul>
+    <li>Public Grievance Management System</li>
+    <li>Citizen Welfare & Service Tracking</li>
+    <li>Appointment & Visitor Management</li>
+    <li>Google Gemini AI Integration</li>
+    <li>TTD Darshan Request Management</li>
+    <li>Development Activity Monitoring</li>
+    <li>Election & Survey Management</li>
+    <li>Offline-first Architecture</li>
+    <li>Secure Authentication System</li>
+  </ul>
+
+  <h3>Technology Stack</h3>
+
+  <ul>
+    <li>Kotlin + Jetpack Compose</li>
+    <li>Firebase & Firestore</li>
+    <li>Google Gemini AI SDK</li>
+    <li>Google Maps APIs</li>
+    <li>Room Database</li>
+    <li>WorkManager</li>
+    <li>MVVM Architecture</li>
+    <li>Encrypted Shared Preferences</li>
+  </ul>
+
+  <h3>Google API Compliance</h3>
+
+  <p>
+    This website serves as the official public documentation page for the
+    Yarlagadda Android application and connected Google APIs including
+    Gemini AI services.
+  </p>
+
+  <a class="btn top-link" href="#home">Back to Top</a>
+
+</section>
+
+<section id="privacy">
+
+  <h2>Privacy Policy</h2>
+
+  <p><strong>Last Updated:</strong> May 2026</p>
+
+  <p>
+    Yarlagadda App respects user privacy and is committed to protecting user data.
+    This Privacy Policy explains how information is collected, used, and protected.
+  </p>
+
+  <h3>Information We Collect</h3>
+
+  <ul>
+    <li>Name and contact information</li>
+    <li>Public grievance details</li>
+    <li>Appointment and visitor information</li>
+    <li>Location information (if permitted)</li>
+    <li>Authentication details</li>
+    <li>Device information for analytics and security</li>
+  </ul>
+
+  <h3>How Information Is Used</h3>
+
+  <ul>
+    <li>To provide citizen services</li>
+    <li>To process public grievances</li>
+    <li>To improve application functionality</li>
+    <li>To provide AI-powered assistance</li>
+    <li>To maintain security and prevent misuse</li>
+  </ul>
+
+  <h3>Google Gemini API Usage</h3>
+
+  <p>
+    The application may use Google Gemini APIs for AI-generated assistance,
+    smart summaries, and automated responses.
+  </p>
+
+  <h3>Third-Party Services</h3>
+
+  <ul>
+    <li>Google Firebase</li>
+    <li>Google Maps APIs</li>
+    <li>Google Gemini APIs</li>
+    <li>Android Platform Services</li>
+  </ul>
+
+  <h3>Data Security</h3>
+
+  <p>
+    Industry-standard security measures including encrypted storage and secure APIs
+    are used to protect user information.
+  </p>
+
+  <a class="btn top-link" href="#home">Back to Top</a>
+
+</section>
+
+<section id="terms">
+
+  <h2>Terms of Service</h2>
+
+  <p><strong>Last Updated:</strong> May 2026</p>
+
+  <h3>Acceptance of Terms</h3>
+
+  <p>
+    By using the Yarlagadda App, users agree to comply with these Terms of Service.
+  </p>
+
+  <h3>Purpose of Application</h3>
+
+  <p>
+    The application is intended to facilitate public administration,
+    citizen services, grievance handling, appointments, and constituency management.
+  </p>
+
+  <h3>User Responsibilities</h3>
+
+  <ul>
+    <li>Provide accurate information</li>
+    <li>Use the application lawfully</li>
+    <li>Do not misuse the services</li>
+    <li>Do not attempt unauthorized access</li>
+  </ul>
+
+  <h3>AI Services</h3>
+
+  <p>
+    Certain features may use AI-generated content powered by Google Gemini APIs.
+    Responses may require human verification.
+  </p>
+
+  <h3>Limitation of Liability</h3>
+
+  <p>
+    The application is provided on an “as available” basis without warranties of uninterrupted operation.
+  </p>
+
+  <h3>Modifications</h3>
+
+  <p>
+    Terms may be updated periodically without prior notice.
+  </p>
+
+  <a class="btn top-link" href="#home">Back to Top</a>
+
+</section>
+
+<section id="contact">
+
+  <h2>Contact Information</h2>
+
+  <p>
+    For official communication, privacy concerns, or technical support regarding the application,
+    users may contact the application administrator.
+  </p>
+
+  <p>
+    Email: mlasofficegannavaram@gmail.com
+  </p>
+
+  <a class="btn top-link" href="#home">Back to Top</a>
+
+</section>
+
+<footer>
+
+  © 2026 Yarlagadda App. All Rights Reserved.
+
+</footer>
+
+</body>
+</html>
