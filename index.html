@@ -4,9 +4,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
   <title>Yarlagadda App – Citizen Services Platform</title>
-  <!-- Favicon (uses your logo) -->
+  <!-- Favicon uses your logo -->
   <link rel="icon" type="image/png" href="/logo.png">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,600;14..32,700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
   <style>
     * {
       margin: 0;
@@ -16,7 +16,7 @@
 
     body {
       font-family: 'Inter', system-ui, -apple-system, sans-serif;
-      background: #fef9e6;  /* warm light yellow background */
+      background: #fef9e6;  /* warm light yellow */
       color: #2c1a0f;
       line-height: 1.5;
       scroll-behavior: smooth;
@@ -46,7 +46,7 @@
       border-radius: 10px;
     }
 
-    /* Header */
+    /* Header / Hero */
     .hero {
       background: linear-gradient(135deg, var(--red) 0%, var(--orange) 100%);
       color: white;
@@ -62,7 +62,7 @@
       left: -50%;
       width: 200%;
       height: 200%;
-      background: radial-gradient(circle, rgba(255,215,0,0.15) 0%, rgba(0,0,0,0) 70%);
+      background: radial-gradient(circle, rgba(255,215,0,0.2) 0%, rgba(0,0,0,0) 70%);
       pointer-events: none;
     }
     .hero-content {
@@ -219,6 +219,10 @@
     .footer a {
       color: var(--yellow);
       text-decoration: none;
+      font-weight: 500;
+    }
+    .footer a:hover {
+      text-decoration: underline;
     }
 
     /* Scroll to top button */
@@ -329,70 +333,28 @@
     <a href="#home" class="btn">⬆ Back to Top</a>
   </section>
 
-  <!-- Privacy Policy Section -->
+  <!-- Privacy Policy Section (summary, with link to full page) -->
   <section id="privacy" class="card">
     <h2>🔒 Privacy Policy</h2>
     <p><strong>Last Updated:</strong> 23 May 2026</p>
-    <p>Your privacy is paramount. This policy describes how the Yarlagadda App collects, uses, and protects your information.</p>
-
-    <h3>📋 Information We Collect</h3>
-    <ul>
-      <li>Name, mobile number, email (voluntary)</li>
-      <li>Grievance details, images, location (only with permission)</li>
-      <li>Appointment & visitor logs</li>
-      <li>Device model, OS version, crash reports (for analytics)</li>
-    </ul>
-
-    <h3>🔧 How We Use Your Data</h3>
-    <ul>
-      <li>Deliver citizen services and process grievances</li>
-      <li>Improve app performance and user experience</li>
-      <li>Provide AI‑assisted responses (via Gemini API)</li>
-      <li>Ensure security and prevent fraudulent use</li>
-    </ul>
-
-    <h3>🤖 Google Gemini API & AI Usage</h3>
-    <p>The app may send user‑generated prompts (e.g., grievance summaries, query) to Gemini AI for generating suggestions or auto‑replies. No personally identifiable information is retained by Google beyond the request context.</p>
-
-    <h3>🌐 Third‑Party Services</h3>
-    <ul>
-      <li>Google Firebase (authentication, analytics, Firestore)</li>
-      <li>Google Maps APIs (location picker)</li>
-      <li>Google Gemini API (AI features)</li>
-    </ul>
-
-    <h3>🔐 Data Security & Retention</h3>
-    <p>We use encrypted storage, TLS transmission, and access controls. Data is retained as long as needed to provide services unless deletion is requested.</p>
-    <a href="#home" class="btn">⬆ Back to Top</a>
+    <p>Your privacy is paramount. This policy explains how the Yarlagadda App collects, uses, and protects your information. We collect only necessary data (name, grievances, optional location) to deliver citizen services. We never sell your data.</p>
+    <p>For the complete privacy policy, please visit our dedicated page:</p>
+    <a href="/privacy.html" class="btn">📄 Read Full Privacy Policy →</a>
+    <div style="margin-top: 1rem;">
+      <a href="#home" class="btn" style="background:#6c757d; margin-left: 0.5rem;">⬆ Back to Top</a>
+    </div>
   </section>
 
-  <!-- Terms of Service -->
+  <!-- Terms of Service Section (summary, with link to full page) -->
   <section id="terms" class="card">
     <h2>📜 Terms of Service</h2>
     <p><strong>Effective from:</strong> 23 May 2026</p>
-
-    <h3>✅ Acceptance of Terms</h3>
-    <p>By downloading, installing, or using the Yarlagadda App, you agree to these Terms.</p>
-
-    <h3>🎯 Purpose & Eligibility</h3>
-    <p>The app is intended for residents of the Yarlagadda constituency and authorised administrators. You must be at least 18 years old to use certain features.</p>
-
-    <h3>👤 User Responsibilities</h3>
-    <ul>
-      <li>Provide true and accurate information</li>
-      <li>Do not misuse the app for illegal activities</li>
-      <li>Do not attempt to bypass security mechanisms</li>
-    </ul>
-
-    <h3>⚙️ AI Features Disclaimer</h3>
-    <p>AI‑generated responses are for informational purposes only and may require human verification. The app developer is not liable for decisions based solely on AI output.</p>
-
-    <h3>⚠️ Limitation of Liability</h3>
-    <p>To the maximum extent permitted by law, Yarlagadda App and its developers are not liable for any indirect, incidental, or consequential damages arising from use of the application.</p>
-
-    <h3>🔄 Modifications to Terms</h3>
-    <p>We may update these Terms occasionally. Continued use after changes constitutes acceptance.</p>
-    <a href="#home" class="btn">⬆ Back to Top</a>
+    <p>By using the Yarlagadda App, you agree to our Terms. These terms govern your use of the app, AI services, user responsibilities, and our limitation of liability.</p>
+    <p>For the complete Terms of Service, please visit:</p>
+    <a href="/terms.html" class="btn">📄 Read Full Terms of Service →</a>
+    <div style="margin-top: 1rem;">
+      <a href="#home" class="btn" style="background:#6c757d; margin-left: 0.5rem;">⬆ Back to Top</a>
+    </div>
   </section>
 
   <!-- Contact Section -->
@@ -408,6 +370,11 @@
 
 <footer class="footer">
   <p>© 2026 Yarlagadda App. All rights reserved.</p>
+  <p style="margin-top: 0.5rem;">
+    <a href="/privacy.html">Privacy Policy</a> | 
+    <a href="/terms.html">Terms of Service</a> | 
+    <a href="#contact">Contact</a>
+  </p>
   <p style="font-size: 0.85rem; margin-top: 0.5rem;">Empowering citizens with transparency, technology & trust. 🇮🇳</p>
 </footer>
 
@@ -428,9 +395,6 @@
       }
     });
   });
-
-  // Show/hide scroll-top button (optional, but always visible for simplicity)
-  // No extra logic needed – button works.
 </script>
 </body>
 </html>
