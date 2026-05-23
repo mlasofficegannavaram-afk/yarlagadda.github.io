@@ -4,9 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
   <title>Yarlagadda App – Citizen Services Platform</title>
-  <!-- Favicon uses your logo -->
   <link rel="icon" type="image/png" href="/logo.png">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;400;600;700;800&display=swap" rel="stylesheet">
   <style>
     * {
       margin: 0;
@@ -16,13 +15,12 @@
 
     body {
       font-family: 'Inter', system-ui, -apple-system, sans-serif;
-      background: #fef9e6;  /* warm light yellow */
+      background: #fef9e6;
       color: #2c1a0f;
       line-height: 1.5;
       scroll-behavior: smooth;
     }
 
-    /* Color Theme */
     :root {
       --red: #e63946;
       --red-dark: #b91c1c;
@@ -31,10 +29,8 @@
       --yellow: #facc15;
       --yellow-dark: #eab308;
       --cream: #fff9ef;
-      --charcoal: #2d2a26;
     }
 
-    /* Custom scrollbar */
     ::-webkit-scrollbar {
       width: 10px;
     }
@@ -46,7 +42,6 @@
       border-radius: 10px;
     }
 
-    /* Header / Hero */
     .hero {
       background: linear-gradient(135deg, var(--red) 0%, var(--orange) 100%);
       color: white;
@@ -98,7 +93,6 @@
       font-weight: 500;
     }
 
-    /* Navigation */
     .navbar {
       background: white;
       position: sticky;
@@ -123,7 +117,6 @@
       padding: 0.6rem 1.2rem;
       border-radius: 40px;
       transition: all 0.25s;
-      background: transparent;
     }
     .nav-link:hover {
       background: var(--yellow);
@@ -131,20 +124,18 @@
       transform: translateY(-2px);
     }
 
-    /* Main container */
     .container {
       max-width: 1200px;
       margin: 2rem auto;
       padding: 0 1.5rem;
     }
 
-    /* Card style sections */
     .card {
       background: white;
       border-radius: 28px;
-      padding: 2rem 2rem;
+      padding: 2rem;
       margin-bottom: 2.5rem;
-      box-shadow: 0 10px 25px -5px rgba(0,0,0,0.05), 0 8px 10px -6px rgba(0,0,0,0.02);
+      box-shadow: 0 10px 25px -5px rgba(0,0,0,0.05);
       transition: transform 0.2s, box-shadow 0.2s;
       border-left: 8px solid var(--orange);
     }
@@ -163,13 +154,13 @@
     .card h3 {
       color: var(--orange-dark);
       font-size: 1.35rem;
-      margin: 1.5rem 0 0.8rem 0;
+      margin: 1.5rem 0 0.8rem;
     }
     .card p {
       margin: 1rem 0;
       color: #2c3e2f;
     }
-    ul, .feature-list {
+    ul {
       list-style: none;
       padding-left: 0;
     }
@@ -194,9 +185,7 @@
       border-radius: 40px;
       text-decoration: none;
       transition: all 0.2s;
-      margin-top: 1rem;
-      border: none;
-      cursor: pointer;
+      margin-top: 0.5rem;
     }
     .btn:hover {
       background: var(--orange-dark);
@@ -204,7 +193,6 @@
       box-shadow: 0 8px 15px rgba(249,115,22,0.3);
     }
 
-    /* Footer */
     .footer {
       background: #1f1a17;
       color: #fdebd0;
@@ -225,7 +213,6 @@
       text-decoration: underline;
     }
 
-    /* Scroll to top button */
     .scroll-top {
       position: fixed;
       bottom: 24px;
@@ -243,57 +230,37 @@
       box-shadow: 0 4px 12px rgba(0,0,0,0.2);
       transition: 0.2s;
       z-index: 99;
-      opacity: 0.9;
     }
     .scroll-top:hover {
       background: var(--red-dark);
       transform: scale(1.05);
-      opacity: 1;
     }
 
-    /* Responsive */
     @media (max-width: 700px) {
-      .hero h1 {
-        font-size: 2.2rem;
-      }
-      .hero p {
-        font-size: 1rem;
-      }
-      .card {
-        padding: 1.5rem;
-      }
-      .logo {
-        width: 80px;
-        height: 80px;
-      }
-      .nav-container {
-        gap: 0.2rem;
-      }
-      .nav-link {
-        padding: 0.4rem 1rem;
-        font-size: 0.9rem;
-      }
+      .hero h1 { font-size: 2.2rem; }
+      .hero p { font-size: 1rem; }
+      .card { padding: 1.5rem; }
+      .logo { width: 80px; height: 80px; }
+      .nav-link { padding: 0.4rem 1rem; font-size: 0.9rem; }
     }
   </style>
 </head>
 <body>
 
-<!-- Hero Header with Logo -->
 <div class="hero">
   <div class="hero-content">
-    <img src="/logo.png" alt="Yarlagadda App Logo" class="logo" onerror="this.onerror=null; this.src='https://via.placeholder.com/110?text=Yarlagadda';">
+    <img src="/logo.png" alt="Yarlagadda Logo" class="logo" onerror="this.src='https://via.placeholder.com/110?text=Y'">
     <h1>Yarlagadda App</h1>
-    <p>Official Android Documentation Portal · Google API & Gemini AI Verification · Privacy & Terms</p>
+    <p>Official Android Documentation Portal · Google API & Gemini AI Verification</p>
   </div>
 </div>
 
-<!-- Navigation -->
 <nav class="navbar">
   <div class="nav-container">
     <a href="#home" class="nav-link">🏠 Home</a>
     <a href="#documentation" class="nav-link">📘 Documentation</a>
-    <a href="#privacy" class="nav-link">🔒 Privacy Policy</a>
-    <a href="#terms" class="nav-link">⚖️ Terms of Service</a>
+    <a href="/privacy.html" class="nav-link">🔒 Privacy Policy</a>
+    <a href="/terms.html" class="nav-link">⚖️ Terms of Service</a>
     <a href="#contact" class="nav-link">📞 Contact</a>
   </div>
 </nav>
@@ -318,14 +285,14 @@
 
     <h3>🛠️ Technology Stack</h3>
     <ul>
-      <li>Kotlin + Jetpack Compose (modern declarative UI)</li>
-      <li>Firebase & Firestore (real‑time sync, offline support)</li>
-      <li>Google Gemini AI SDK (on‑device & cloud)</li>
+      <li>Kotlin + Jetpack Compose</li>
+      <li>Firebase & Firestore</li>
+      <li>Google Gemini AI SDK</li>
       <li>Google Maps & Places APIs</li>
-      <li>Room Database + SQLite (offline cache)</li>
+      <li>Room Database + SQLite</li>
       <li>WorkManager (background sync)</li>
       <li>MVVM + Repository pattern</li>
-      <li>Encrypted SharedPreferences (secure local data)</li>
+      <li>Encrypted SharedPreferences</li>
     </ul>
 
     <h3>✅ Google API Compliance</h3>
@@ -333,27 +300,23 @@
     <a href="#home" class="btn">⬆ Back to Top</a>
   </section>
 
-  <!-- Privacy Policy Section (summary, with link to full page) -->
-  <section id="privacy" class="card">
+  <!-- Privacy Policy Link Card (no full text) -->
+  <section class="card">
     <h2>🔒 Privacy Policy</h2>
-    <p><strong>Last Updated:</strong> 23 May 2026</p>
-    <p>Your privacy is paramount. This policy explains how the Yarlagadda App collects, uses, and protects your information. We collect only necessary data (name, grievances, optional location) to deliver citizen services. We never sell your data.</p>
-    <p>For the complete privacy policy, please visit our dedicated page:</p>
+    <p>Your privacy is important to us. We collect only necessary data to provide citizen services and never sell your information. Read our complete privacy policy on the dedicated page.</p>
     <a href="/privacy.html" class="btn">📄 Read Full Privacy Policy →</a>
     <div style="margin-top: 1rem;">
-      <a href="#home" class="btn" style="background:#6c757d; margin-left: 0.5rem;">⬆ Back to Top</a>
+      <a href="#home" class="btn" style="background:#6c757d;">⬆ Back to Top</a>
     </div>
   </section>
 
-  <!-- Terms of Service Section (summary, with link to full page) -->
-  <section id="terms" class="card">
+  <!-- Terms of Service Link Card (no full text) -->
+  <section class="card">
     <h2>📜 Terms of Service</h2>
-    <p><strong>Effective from:</strong> 23 May 2026</p>
-    <p>By using the Yarlagadda App, you agree to our Terms. These terms govern your use of the app, AI services, user responsibilities, and our limitation of liability.</p>
-    <p>For the complete Terms of Service, please visit:</p>
+    <p>By using the Yarlagadda App, you agree to our Terms. These terms govern your use of the app, AI services, user responsibilities, and limitation of liability.</p>
     <a href="/terms.html" class="btn">📄 Read Full Terms of Service →</a>
     <div style="margin-top: 1rem;">
-      <a href="#home" class="btn" style="background:#6c757d; margin-left: 0.5rem;">⬆ Back to Top</a>
+      <a href="#home" class="btn" style="background:#6c757d;">⬆ Back to Top</a>
     </div>
   </section>
 
@@ -361,7 +324,7 @@
   <section id="contact" class="card">
     <h2>📞 Contact & Support</h2>
     <p>For official communication, privacy concerns, technical support, or to request data deletion:</p>
-    <p style="margin-top: 1rem;"><strong>📧 Email:</strong> <a href="mailto:mlasofficegannavaram@gmail.com" style="color: var(--orange-dark);">mlasofficegannavaram@gmail.com</a></p>
+    <p><strong>📧 Email:</strong> <a href="mailto:mlasofficegannavaram@gmail.com" style="color: var(--orange-dark);">mlasofficegannavaram@gmail.com</a></p>
     <p><strong>🏛️ Office:</strong> MLA Office, Gannavaram Constituency, Andhra Pradesh, India</p>
     <p>We aim to respond within 3 business days.</p>
     <a href="#home" class="btn">⬆ Back to Top</a>
@@ -370,18 +333,17 @@
 
 <footer class="footer">
   <p>© 2026 Yarlagadda App. All rights reserved.</p>
-  <p style="margin-top: 0.5rem;">
+  <p>
     <a href="/privacy.html">Privacy Policy</a> | 
     <a href="/terms.html">Terms of Service</a> | 
     <a href="#contact">Contact</a>
   </p>
-  <p style="font-size: 0.85rem; margin-top: 0.5rem;">Empowering citizens with transparency, technology & trust. 🇮🇳</p>
+  <p style="font-size: 0.85rem;">Empowering citizens with transparency, technology & trust. 🇮🇳</p>
 </footer>
 
 <a href="#" class="scroll-top" aria-label="Scroll to top">↑</a>
 
 <script>
-  // Smooth scrolling for all anchor links
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function(e) {
       const targetId = this.getAttribute('href');
@@ -390,7 +352,6 @@
       if (targetElement) {
         e.preventDefault();
         targetElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
-        // Update URL without jumping (optional)
         history.pushState(null, null, targetId);
       }
     });
