@@ -29,6 +29,8 @@
       --yellow: #facc15;
       --yellow-dark: #eab308;
       --cream: #fff9ef;
+      --green: #16a34a;
+      --green-dark: #15803d;
     }
 
     ::-webkit-scrollbar {
@@ -143,6 +145,12 @@
       transform: translateY(-4px);
       box-shadow: 0 25px 30px -12px rgba(0,0,0,0.15);
     }
+    .card.danger-card {
+      border-left-color: var(--red);
+    }
+    .card.success-card {
+      border-left-color: var(--green);
+    }
     .card h2 {
       color: var(--red);
       font-size: 2rem;
@@ -191,6 +199,42 @@
       background: var(--orange-dark);
       transform: translateY(-2px);
       box-shadow: 0 8px 15px rgba(249,115,22,0.3);
+    }
+    .btn-danger {
+      background: var(--red);
+    }
+    .btn-danger:hover {
+      background: var(--red-dark);
+      box-shadow: 0 8px 15px rgba(230,57,70,0.3);
+    }
+    .btn-secondary {
+      background: #6c757d;
+    }
+    .btn-secondary:hover {
+      background: #5a6268;
+      box-shadow: 0 8px 15px rgba(108,117,125,0.3);
+    }
+
+    .compliance-badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.6rem;
+      margin-top: 1rem;
+    }
+    .badge {
+      display: inline-block;
+      background: #ecfdf5;
+      color: var(--green-dark);
+      border: 1px solid #a7f3d0;
+      padding: 0.35rem 0.85rem;
+      border-radius: 20px;
+      font-size: 0.85rem;
+      font-weight: 600;
+    }
+    .badge.warn {
+      background: #fff7ed;
+      color: #c2410c;
+      border-color: #fed7aa;
     }
 
     .footer {
@@ -251,7 +295,7 @@
   <div class="hero-content">
     <img src="/logo.png" alt="Yarlagadda Logo" class="logo" onerror="this.src='https://via.placeholder.com/110?text=Y'">
     <h1>Yarlagadda App</h1>
-    <p>Official Android Documentation Portal · Google API & Gemini AI Verification</p>
+    <p>Official Android Documentation Portal · Google API &amp; Gemini AI Verification</p>
   </div>
 </div>
 
@@ -261,6 +305,7 @@
     <a href="#documentation" class="nav-link">📘 Documentation</a>
     <a href="/privacy.html" class="nav-link">🔒 Privacy Policy</a>
     <a href="/terms.html" class="nav-link">⚖️ Terms of Service</a>
+    <a href="/delete-account.html" class="nav-link">🗑️ Delete Account</a>
     <a href="#contact" class="nav-link">📞 Contact</a>
   </div>
 </nav>
@@ -270,29 +315,33 @@
   <section id="documentation" class="card">
     <h2>📱 Application Documentation</h2>
     <p><strong>Yarlagadda</strong> is a next‑gen constituency management and citizen services Android application built for transparent governance, grievance redressal, appointment scheduling, welfare schemes, TTD darshan requests, AI‑powered assistance, and real‑time development monitoring.</p>
-    
+
     <h3>✨ Core Features</h3>
     <ul>
       <li>Public Grievance Management with real‑time tracking</li>
-      <li>Citizen Welfare & Service Delivery Dashboard</li>
-      <li>Appointment & Visitor Management System</li>
-      <li>Google Gemini AI Integration (smart summarisation & chat)</li>
-      <li>TTD Darshan Request & Festival Calendar</li>
+      <li>Citizen Welfare &amp; Service Delivery Dashboard</li>
+      <li>Appointment &amp; Visitor Management System</li>
+      <li>Google Gemini AI Integration (smart summarisation &amp; chat)</li>
+      <li>TTD Darshan Request &amp; Festival Calendar</li>
       <li>Development Activity Monitoring (geo‑tagged)</li>
-      <li>Election & Survey Management (offline‑first)</li>
-      <li>Secure Authentication (Firebase Auth + encrypted storage)</li>
+      <li>Election &amp; Survey Management (offline‑first)</li>
+      <li>Secure Authentication (Google Sign-In + encrypted Supabase storage)</li>
+      <li>Role-based access: Public · Staff · Technical Admin · MLA Dashboard</li>
     </ul>
 
     <h3>🛠️ Technology Stack</h3>
     <ul>
       <li>Kotlin + Jetpack Compose</li>
-      <li>Firebase & Firestore</li>
-      <li>Google Gemini AI SDK</li>
-      <li>Google Maps & Places APIs</li>
-      <li>Room Database + SQLite</li>
+      <li>Supabase (PostgreSQL + Auth + Row-Level Security)</li>
+      <li>Google Sign-In via Credential Manager API</li>
+      <li>Google Gemini AI SDK (gemini-2.5-flash)</li>
+      <li>Google Maps &amp; Places APIs</li>
+      <li>Room Database + SQLite (offline-first)</li>
+      <li>Firebase Cloud Messaging (push notifications)</li>
+      <li>Firebase Crashlytics (stability monitoring)</li>
       <li>WorkManager (background sync)</li>
       <li>MVVM + Repository pattern</li>
-      <li>Encrypted SharedPreferences</li>
+      <li>Encrypted local storage for sensitive fields</li>
     </ul>
 
     <h3>✅ Google API Compliance</h3>
@@ -300,32 +349,137 @@
     <a href="#home" class="btn">⬆ Back to Top</a>
   </section>
 
-  <!-- Privacy Policy Link Card (no full text) -->
+  <!-- Privacy Policy Link Card -->
   <section class="card">
     <h2>🔒 Privacy Policy</h2>
-    <p>Your privacy is important to us. We collect only necessary data to provide citizen services and never sell your information. Read our complete privacy policy on the dedicated page.</p>
+    <p>Your privacy is important to us. The Yarlagadda App collects only the data needed to deliver citizen services — and never sells your information.</p>
+
+    <h3>Data we collect</h3>
+    <ul>
+      <li><strong>Account:</strong> name, email, mobile number, profile photo</li>
+      <li><strong>Government ID:</strong> Aadhaar number (optional — for welfare scheme eligibility only)</li>
+      <li><strong>Location:</strong> village, mandal, district, GPS (with your permission)</li>
+      <li><strong>Content you submit:</strong> grievances, photos, voice notes, survey responses</li>
+      <li><strong>Contacts:</strong> only when you explicitly use the Invite feature</li>
+      <li><strong>Permissions:</strong> Camera · Microphone · Location · Contacts · Notifications · Phone number (prefill only)</li>
+    </ul>
+
+    <p>Read our full privacy policy for complete details on data retention, third-party sharing, encryption, and your rights.</p>
+
+    <div class="compliance-badges">
+      <span class="badge">TLS 1.2+ Encryption</span>
+      <span class="badge">RLS-Protected Backend</span>
+      <span class="badge">Aadhaar Encrypted at Rest</span>
+      <span class="badge">No Data Sold</span>
+      <span class="badge">30-Day Deletion SLA</span>
+    </div>
+
     <a href="/privacy.html" class="btn">📄 Read Full Privacy Policy →</a>
     <div style="margin-top: 1rem;">
-      <a href="#home" class="btn" style="background:#6c757d;">⬆ Back to Top</a>
+      <a href="#home" class="btn btn-secondary">⬆ Back to Top</a>
     </div>
   </section>
 
-  <!-- Terms of Service Link Card (no full text) -->
+  <!-- Terms of Service Link Card -->
   <section class="card">
     <h2>📜 Terms of Service</h2>
-    <p>By using the Yarlagadda App, you agree to our Terms. These terms govern your use of the app, AI services, user responsibilities, and limitation of liability.</p>
+    <p>By using the Yarlagadda App, you agree to our Terms. These terms govern your use of the app, AI services, user responsibilities, content moderation, and limitation of liability.</p>
+
+    <h3>Highlights</h3>
+    <ul>
+      <li>You must be 18+ for certain civic and political features</li>
+      <li>AI responses are labelled and reviewed before publishing</li>
+      <li>User-generated content is moderated before it becomes visible</li>
+      <li>The app is not affiliated with any political party</li>
+      <li>Misuse (spam, abuse, misinformation) may result in account suspension</li>
+    </ul>
+
     <a href="/terms.html" class="btn">📄 Read Full Terms of Service →</a>
     <div style="margin-top: 1rem;">
-      <a href="#home" class="btn" style="background:#6c757d;">⬆ Back to Top</a>
+      <a href="#home" class="btn btn-secondary">⬆ Back to Top</a>
     </div>
+  </section>
+
+  <!-- Account Deletion Card (NEW) -->
+  <section id="delete-account" class="card danger-card">
+    <h2>🗑️ Delete Your Account</h2>
+    <p>You can delete your Yarlagadda App account and all associated personal data at any time — either from inside the app or by emailing us.</p>
+
+    <h3>How to request deletion</h3>
+    <ul>
+      <li><strong>In-app (fastest):</strong> Settings → Account → Delete Account</li>
+      <li><strong>By email:</strong> Send a request from your registered email to <a href="mailto:mlasofficegannavaram@gmail.com?subject=Delete%20My%20YVR%20Account">mlasofficegannavaram@gmail.com</a></li>
+    </ul>
+
+    <h3>What gets deleted</h3>
+    <ul>
+      <li>Account credentials (name, email, mobile)</li>
+      <li>Profile information and Aadhaar number (including encrypted backups)</li>
+      <li>Location history, blood donation profile, job seeker profile</li>
+      <li>Push notification token</li>
+      <li>Comments and reactions (anonymised, disassociated from you)</li>
+    </ul>
+
+    <h3>What is retained (and why)</h3>
+    <ul>
+      <li>Grievance records — 5 years (government audit requirement, anonymised)</li>
+      <li>Financial records — 7 years (Indian tax law, if applicable)</li>
+    </ul>
+
+    <p><strong>Timeline:</strong> Acknowledged within 7 days · Deleted within 30 days · Backups purged within 30 days of deletion.</p>
+
+    <a href="/delete-account.html" class="btn btn-danger">🗑️ Open Full Deletion Page →</a>
+    <div style="margin-top: 1rem;">
+      <a href="#home" class="btn btn-secondary">⬆ Back to Top</a>
+    </div>
+  </section>
+
+  <!-- Data Safety & Compliance (NEW) -->
+  <section class="card success-card">
+    <h2>🛡️ Data Safety &amp; Compliance</h2>
+    <p>The Yarlagadda App follows Google Play's Data Safety requirements and India's Digital Personal Data Protection Act, 2023.</p>
+
+    <h3>Data Safety Summary</h3>
+    <ul>
+      <li><strong>Encrypted in transit:</strong> Yes (TLS 1.2+)</li>
+      <li><strong>Encrypted at rest:</strong> Yes (Aadhaar and sensitive fields)</li>
+      <li><strong>Data sold to third parties:</strong> No</li>
+      <li><strong>Users can request deletion:</strong> Yes — see the Delete Account section above</li>
+      <li><strong>Data shared with government officials:</strong> Only for grievance resolution, scoped to your constituency</li>
+      <li><strong>AI processing:</strong> Only text/images you explicitly submit to AI features are sent to Google Gemini. Aadhaar numbers, passwords, and auth tokens are never sent to any AI service.</li>
+    </ul>
+
+    <h3>Permissions &amp; Prominent Disclosure</h3>
+    <ul>
+      <li><strong>Camera:</strong> Rationale dialog shown before the OS prompt</li>
+      <li><strong>Location:</strong> Rationale dialog shown before the OS prompt</li>
+      <li><strong>Contacts:</strong> In-app disclosure shown before the OS prompt; only selected contacts are processed</li>
+      <li><strong>Microphone:</strong> Rationale dialog shown before the OS prompt</li>
+      <li><strong>Notifications:</strong> Requested after sign-in with user-visible explanation</li>
+    </ul>
+
+    <div class="compliance-badges">
+      <span class="badge">Google Play Data Safety Aligned</span>
+      <span class="badge">DPDP Act 2023 Ready</span>
+      <span class="badge">Row-Level Security</span>
+      <span class="badge">AI Content Labelled</span>
+      <span class="badge">UGC Moderation</span>
+    </div>
+
+    <a href="#home" class="btn">⬆ Back to Top</a>
   </section>
 
   <!-- Contact Section -->
   <section id="contact" class="card">
-    <h2>📞 Contact & Support</h2>
+    <h2>📞 Contact &amp; Support</h2>
     <p>For official communication, privacy concerns, technical support, or to request data deletion:</p>
     <p><strong>📧 Email:</strong> <a href="mailto:mlasofficegannavaram@gmail.com" style="color: var(--orange-dark);">mlasofficegannavaram@gmail.com</a></p>
-    <p><strong>🏛️ Office:</strong> MLA Office, Gannavaram Constituency, Andhra Pradesh, India</p>
+    <p><strong>📞 Phone:</strong> +91-8985098999</p>
+    <p><strong>🏛️ Office:</strong> MLA Office, Gannavaram, Krishna District, Andhra Pradesh — 521101, India</p>
+
+    <h3>Grievance Officer (DPDP Act, 2023)</h3>
+    <p>For privacy-related complaints, contact our Grievance Officer at <a href="mailto:mlasofficegannavaram@gmail.com" style="color: var(--orange-dark);">mlasofficegannavaram@gmail.com</a>. Response within 7 days; resolution within 30 days.</p>
+
     <p>We aim to respond within 3 business days.</p>
     <a href="#home" class="btn">⬆ Back to Top</a>
   </section>
@@ -334,11 +488,12 @@
 <footer class="footer">
   <p>© 2026 Yarlagadda App. All rights reserved.</p>
   <p>
-    <a href="/privacy.html">Privacy Policy</a> | 
-    <a href="/terms.html">Terms of Service</a> | 
+    <a href="/privacy.html">Privacy Policy</a> |
+    <a href="/terms.html">Terms of Service</a> |
+    <a href="/delete-account.html">Delete Account</a> |
     <a href="#contact">Contact</a>
   </p>
-  <p style="font-size: 0.85rem;">Empowering citizens with transparency, technology & trust. 🇮🇳</p>
+  <p style="font-size: 0.85rem;">Empowering citizens with transparency, technology &amp; trust. 🇮🇳</p>
 </footer>
 
 <a href="#" class="scroll-top" aria-label="Scroll to top">↑</a>
