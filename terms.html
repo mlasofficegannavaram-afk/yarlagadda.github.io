@@ -46,6 +46,7 @@
       padding: 2rem;
       border-left: 8px solid var(--orange);
       box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+      margin-bottom: 1.5rem;
     }
     h2 {
       color: var(--red);
@@ -74,6 +75,14 @@
       border-top: 5px solid var(--yellow);
     }
     a { color: var(--orange); text-decoration: none; }
+    .note {
+      background: #fff8e6;
+      border-left: 4px solid var(--yellow);
+      padding: 12px 16px;
+      margin: 16px 0;
+      border-radius: 4px;
+      font-size: 0.95rem;
+    }
     @media (max-width: 700px) {
       .hero h1 { font-size: 1.8rem; }
       .card { padding: 1.2rem; }
@@ -84,41 +93,121 @@
 <div class="hero">
   <img src="/logo.png" alt="Yarlagadda Logo" class="logo" onerror="this.src='https://via.placeholder.com/80?text=Y'">
   <h1>Terms of Service</h1>
-  <p>Effective from May 23, 2026</p>
+  <p>Effective from: <time datetime="2026-09-28">28 September 2026</time></p>
 </div>
 <div class="container">
+
   <div class="card">
     <h2>⚖️ Agreement to Terms</h2>
-    <p>By downloading, installing, or using the Yarlagadda Android app, you agree to be bound by these Terms of Service. If you do not agree, please do not use the app.</p>
+    <p>By downloading, installing, or using the <strong>Yarlagadda Android app</strong> ("the App"), you agree to be bound by these Terms of Service. If you do not agree, please do not use the App.</p>
+    <p>The App is operated by the <strong>MLA Office Gannavaram</strong> for constituent services in the Gannavaram constituency, Krishna District, Andhra Pradesh, India.</p>
+  </div>
 
-    <h3>✅ Eligibility & Purpose</h3>
-    <p>The app is intended for residents of the Yarlagadda constituency and authorised administrators. You must be at least 18 years old to use certain features (e.g., grievance filing).</p>
+  <div class="card">
+    <h2>✅ Eligibility &amp; Purpose</h2>
+    <p>The App is intended for residents of the Gannavaram constituency, authorised constituency staff, and government officials. You must be <strong>at least 18 years old</strong> to:</p>
+    <ul>
+      <li>File a grievance</li>
+      <li>Register as a blood donor or job seeker</li>
+      <li>Participate in public interactions or surveys</li>
+      <li>Access any official role (Staff, Technical Admin, MLA Dashboard)</li>
+    </ul>
+    <p>By using these features, you confirm you are 18 or older.</p>
+  </div>
 
-    <h3>👤 User Responsibilities</h3>
+  <div class="card">
+    <h2>👤 User Responsibilities</h2>
     <ul>
       <li>Provide accurate and truthful information.</li>
-      <li>Do not misuse the app for illegal activities, harassment, or spreading misinformation.</li>
-      <li>Do not attempt to reverse‑engineer or compromise app security.</li>
+      <li>Do not misuse the App for illegal activities, harassment, or spreading misinformation.</li>
+      <li>Do not attempt to reverse-engineer or compromise App security.</li>
       <li>Respect the privacy and rights of others.</li>
+      <li>Do not impersonate any person or government body.</li>
+      <li>Do not submit content that is abusive, defamatory, obscene, or violates any law.</li>
     </ul>
+  </div>
 
-    <h3>🤖 AI‑Generated Content Disclaimer</h3>
-    <p>Some features use Google Gemini API to generate replies or summaries. AI responses are for informational purposes only and may contain errors. Final decisions (e.g., grievance approval) are made by human administrators. The app developer is not liable for actions taken solely based on AI output.</p>
+  <div class="card">
+    <h2>💬 User-Generated Content &amp; Moderation</h2>
+    <p>The App allows users to post comments, reactions, and survey responses. To keep the community safe:</p>
+    <ul>
+      <li>All public comments are <strong>moderated before they become visible</strong>.</li>
+      <li>You can <strong>report any comment</strong> you find inappropriate using the Report option.</li>
+      <li>You can <strong>block any user</strong> whose content you do not wish to see.</li>
+      <li>Content that violates these Terms will be removed, and repeat offenders may be suspended.</li>
+      <li>We reserve the right to remove any content that violates Indian law or these Terms without prior notice.</li>
+    </ul>
+  </div>
 
-    <h3>⚠️ Limitation of Liability</h3>
-    <p>To the maximum extent permitted by law, Yarlagadda App and its developers shall not be liable for any indirect, incidental, or consequential damages arising from the use or inability to use the application, including data loss or service interruptions.</p>
+  <div class="card">
+    <h2>🤖 AI-Generated Content Disclaimer</h2>
+    <p>Some features use the <strong>Google Gemini API</strong> to generate replies, summaries, form auto-fill suggestions, and reel descriptions. AI-generated content is labelled with an "AI-generated" badge.</p>
+    <ul>
+      <li>AI responses are <strong>for informational purposes only</strong> and may contain errors.</li>
+      <li>Final decisions (e.g., grievance approval, welfare eligibility) are made by <strong>human administrators</strong>, not by AI.</li>
+      <li>The App developer is not liable for actions taken solely based on unverified AI output.</li>
+    </ul>
+    <div class="note">
+      <strong>Data sent to AI:</strong> Only the specific text or image you explicitly submit to an AI feature. We do <strong>not</strong> send your Aadhaar number, password, or authentication token to any AI service.
+    </div>
+  </div>
 
-    <h3>🔄 Modifications to Terms</h3>
-    <p>We may update these Terms from time to time. Continued use of the app after changes constitutes acceptance. Material changes will be notified via the app or email.</p>
+  <div class="card">
+    <h2>🇮🇳 Political Content Disclaimer</h2>
+    <p>The App displays content related to the Gannavaram constituency's development activities, including public records, government data, and user submissions.</p>
+    <p>The App is <strong>not affiliated with, endorsed by, or funded by any political party</strong>. Any political content is either user-submitted or sourced from public records.</p>
+  </div>
 
-    <h3>📞 Contact & Termination</h3>
-    <p>If you violate these Terms, your access may be suspended. For questions or to report violations, contact <strong>mlasofficegannavaram@gmail.com</strong>.</p>
+  <div class="card">
+    <h2>🗑️ Account Termination &amp; Deletion</h2>
+    <p><strong>Voluntary termination:</strong> You may delete your account at any time via <a href="/delete-account.html">yarlagadda.app/delete-account.html</a> or by emailing <a href="mailto:mlasofficegannavaram@gmail.com">mlasofficegannavaram@gmail.com</a> from your registered email.</p>
+    <p><strong>Termination for violation:</strong> If you violate these Terms, your access may be suspended or terminated. We will notify you via email.</p>
+    <p><strong>What happens to your data on termination:</strong></p>
+    <ul>
+      <li>Account data, profile info, and Aadhaar are deleted within 30 days.</li>
+      <li>Grievance records are retained for 5 years (anonymised) for government audit purposes.</li>
+      <li>Crash logs and analytics are anonymised.</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h2>⚠️ Limitation of Liability</h2>
+    <p>To the maximum extent permitted by law, Yarlagadda App and its developers shall not be liable for any indirect, incidental, or consequential damages arising from the use or inability to use the Application, including data loss or service interruptions.</p>
+    <p>The App is provided "as is" without warranties of any kind, express or implied.</p>
+  </div>
+
+  <div class="card">
+    <h2>🔄 Modifications to Terms</h2>
+    <p>We may update these Terms from time to time. Continued use of the App after changes constitutes acceptance. Material changes will be notified via the App or email. The "Effective from" date at the top reflects the latest version.</p>
+  </div>
+
+  <div class="card">
+    <h2>⚖️ Governing Law &amp; Jurisdiction</h2>
+    <p>These Terms are governed by the laws of <strong>India</strong>. Any disputes arising from the use of the App shall be subject to the exclusive jurisdiction of the courts of <strong>Krishna District, Andhra Pradesh, India</strong>.</p>
+  </div>
+
+  <div class="card">
+    <h2>📞 Contact &amp; Grievance Officer</h2>
+    <p>For questions, to report a violation, or for privacy concerns:</p>
+    <p>
+      <strong>MLA Office Gannavaram</strong><br>
+      MLA Office, Gannavaram, Krishna District, Andhra Pradesh – 521101, India<br>
+      Email: <a href="mailto:mlasofficegannavaram@gmail.com">mlasofficegannavaram@gmail.com</a><br>
+      Phone: +91-8985098999
+    </p>
+    <p>Grievance Officer (DPDP Act, 2023): response acknowledged within 7 days; resolution within 30 days.</p>
     <a href="/" class="btn">← Back to Homepage</a>
   </div>
+
 </div>
 <div class="footer">
   <p>© 2026 Yarlagadda App. All rights reserved.</p>
-  <p><a href="/">Home</a> | <a href="/privacy.html">Privacy Policy</a></p>
+  <p>
+    <a href="/">Home</a> |
+    <a href="/privacy.html">Privacy Policy</a> |
+    <a href="/terms.html">Terms of Service</a> |
+    <a href="/delete-account.html">Delete Account</a>
+  </p>
 </div>
 </body>
 </html>
