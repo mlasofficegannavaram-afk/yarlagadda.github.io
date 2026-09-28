@@ -20,6 +20,7 @@
       --orange: #f97316;
       --orange-dark: #ea580c;
       --yellow: #facc15;
+      --green: #16a34a;
     }
     .hero {
       background: linear-gradient(135deg, var(--red), var(--orange));
@@ -46,6 +47,7 @@
       padding: 2rem;
       border-left: 8px solid var(--orange);
       box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+      margin-bottom: 1.5rem;
     }
     h2 {
       color: var(--red);
@@ -56,6 +58,19 @@
     h3 { color: var(--orange-dark); margin: 1.2rem 0 0.5rem; }
     ul { padding-left: 1.5rem; margin: 0.5rem 0; }
     li { margin-bottom: 0.5rem; }
+    table {
+      border-collapse: collapse;
+      width: 100%;
+      margin: 1rem 0;
+      font-size: 0.95rem;
+    }
+    th, td {
+      border: 1px solid #e5e5e5;
+      padding: 8px 10px;
+      text-align: left;
+      vertical-align: top;
+    }
+    th { background: #fafafa; font-weight: 600; }
     .btn {
       display: inline-block;
       background: var(--orange);
@@ -74,9 +89,18 @@
       border-top: 5px solid var(--yellow);
     }
     a { color: var(--orange); text-decoration: none; }
+    .note {
+      background: #fff8e6;
+      border-left: 4px solid var(--yellow);
+      padding: 12px 16px;
+      margin: 16px 0;
+      border-radius: 4px;
+      font-size: 0.95rem;
+    }
     @media (max-width: 700px) {
       .hero h1 { font-size: 1.8rem; }
       .card { padding: 1.2rem; }
+      table { font-size: 0.85rem; }
     }
   </style>
 </head>
@@ -84,43 +108,238 @@
 <div class="hero">
   <img src="/logo.png" alt="Yarlagadda Logo" class="logo" onerror="this.src='https://via.placeholder.com/80?text=Y'">
   <h1>Privacy Policy</h1>
-  <p>Yarlagadda App – Last updated: May 23, 2026</p>
+  <p>Yarlagadda App – Last updated: <time datetime="2026-09-28">28 September 2026</time></p>
 </div>
 <div class="container">
+
   <div class="card">
     <h2>🔒 Your Privacy Matters</h2>
-    <p>This policy explains how Yarlagadda App collects, uses, and protects your personal information. By using our app, you agree to this policy.</p>
+    <p>This policy explains how the <strong>Yarlagadda App</strong> ("the App") collects, uses, and protects your personal information. The App is operated by the <strong>MLA Office Gannavaram</strong> for constituent services in the Gannavaram constituency, Krishna District, Andhra Pradesh, India.</p>
+    <p>By using the App, you agree to this policy. If you do not agree, please do not use the App.</p>
+  </div>
 
-    <h3>📋 Information We Collect</h3>
+  <div class="card">
+    <h2>🏛️ Data Controller</h2>
+    <p>
+      <strong>MLA Office Gannavaram</strong><br>
+      MLA Office, Gannavaram, Krishna District,<br>
+      Andhra Pradesh – 521101, India<br>
+      Email: <a href="mailto:mlasofficegannavaram@gmail.com">mlasofficegannavaram@gmail.com</a><br>
+      Phone: +91-8985098999
+    </p>
+  </div>
+
+  <div class="card">
+    <h2>📋 Information We Collect</h2>
+
+    <h3>Information you provide directly</h3>
+    <table>
+      <tr><th>Category</th><th>Examples</th><th>Purpose</th><th>Required?</th></tr>
+      <tr>
+        <td>Account</td>
+        <td>Name, email, mobile number, profile photo</td>
+        <td>Account creation, sign-in</td>
+        <td>Required</td>
+      </tr>
+      <tr>
+        <td>Government ID (Aadhaar)</td>
+        <td>12-digit Aadhaar number</td>
+        <td>Welfare scheme eligibility and TTD darshan assistance. <strong>Never shared with third parties.</strong></td>
+        <td>Optional</td>
+      </tr>
+      <tr>
+        <td>Location details</td>
+        <td>Village, mandal, district, address</td>
+        <td>Route your grievance to the correct official</td>
+        <td>Required for services</td>
+      </tr>
+      <tr>
+        <td>Grievance content</td>
+        <td>Text, photos, voice notes</td>
+        <td>Process and resolve your grievance</td>
+        <td>Required for grievances</td>
+      </tr>
+      <tr>
+        <td>Public interactions</td>
+        <td>Comments, reactions, survey responses</td>
+        <td>Community engagement (moderated before publishing)</td>
+        <td>Optional</td>
+      </tr>
+      <tr>
+        <td>Blood donation profile</td>
+        <td>Blood group, contact</td>
+        <td>Emergency blood matching</td>
+        <td>Optional</td>
+      </tr>
+      <tr>
+        <td>Job seeker profile</td>
+        <td>Qualification, experience, preferred location</td>
+        <td>Job matching</td>
+        <td>Optional</td>
+      </tr>
+      <tr>
+        <td>Volunteer / beneficiary data</td>
+        <td>Age, gender, scheme participation</td>
+        <td>Welfare scheme eligibility</td>
+        <td>Optional</td>
+      </tr>
+    </table>
+
+    <h3>Information collected automatically (with your permission)</h3>
+    <table>
+      <tr><th>Category</th><th>Purpose</th></tr>
+      <tr><td>Precise &amp; approximate location (GPS)</td><td>Auto-fill location, SOS alerts, nearby services, office check-in</td></tr>
+      <tr><td>Camera</td><td>Profile photo, Aadhaar QR scan, grievance evidence, document scan</td></tr>
+      <tr><td>Microphone / Audio</td><td>Voice-input grievances, AI voice assistant</td></tr>
+      <tr><td>Photos / Media library</td><td>Profile picture, grievance attachments</td></tr>
+      <tr><td>Contacts</td><td>Only when you explicitly use the Invite feature — we do <strong>not</strong> upload your entire address book</td></tr>
+      <tr><td>Device information</td><td>Model, OS version, app version, language, phone number (for prefill only)</td></tr>
+      <tr><td>Push notification token</td><td>Updates on grievances, approvals, announcements</td></tr>
+      <tr><td>Crash logs &amp; diagnostics</td><td>Fix bugs, improve stability</td></tr>
+      <tr><td>Usage analytics</td><td>Improve the App (aggregated)</td></tr>
+    </table>
+
+    <h3>Information from third parties</h3>
     <ul>
-      <li>Name, phone number, email (only when you voluntarily provide)</li>
-      <li>Grievance details, photos, location (with your explicit permission)</li>
-      <li>Device information (model, OS version) for crash analytics</li>
-      <li>App usage data to improve performance</li>
+      <li><strong>Google Sign-In:</strong> We receive your Google account email, name, and profile picture.</li>
+      <li><strong>Supabase:</strong> Our backend provider stores the data you submit.</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h2>🔧 How We Use Your Information</h2>
+    <ul>
+      <li>Create and manage your account</li>
+      <li>Verify eligibility for welfare schemes and civic services</li>
+      <li>Route grievances to the correct official and track resolution</li>
+      <li>Match blood donors with emergency requests</li>
+      <li>Match job seekers with opportunities</li>
+      <li>Send notifications about your account and grievances</li>
+      <li>Display your public interactions to other users (only what you choose to make public)</li>
+      <li>Detect and prevent fraud, abuse, and duplicate registrations</li>
+      <li>Comply with legal obligations</li>
+    </ul>
+    <p><strong>We do NOT:</strong></p>
+    <ul>
+      <li>Sell your personal data</li>
+      <li>Use your Aadhaar number for any purpose other than scheme eligibility verification</li>
+      <li>Share your contact information with advertisers</li>
+      <li>Use your data for targeted advertising</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h2>🤝 How We Share Your Information</h2>
+    <table>
+      <tr><th>Recipient</th><th>What is shared</th><th>Purpose</th></tr>
+      <tr><td>Supabase Inc. (backend)</td><td>All data you submit</td><td>Encrypted storage and authentication</td></tr>
+      <tr><td>Google Firebase</td><td>Push token, crash logs, device info</td><td>Push notifications, crash reporting</td></tr>
+      <tr><td>Google Maps</td><td>Location coordinates (only when a map is displayed)</td><td>Map display</td></tr>
+      <tr><td>Google Gemini API</td><td>Only the text/image you explicitly submit to AI features</td><td>AI assistant, form auto-fill</td></tr>
+      <tr><td>Government officials (constituency-scoped)</td><td>Grievance details, name, contact</td><td>Resolve your grievance</td></tr>
+      <tr><td>Other app users</td><td>Your public interactions</td><td>Community features</td></tr>
+      <tr><td>Law enforcement</td><td>On valid legal request</td><td>Comply with the law</td></tr>
+    </table>
+    <div class="note">
+      <strong>AI Scope:</strong> Only the specific inputs you submit to AI features are sent to Google Gemini. We do <strong>not</strong> send your Aadhaar number, password, or authentication token to any AI service.
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>🔐 Data Storage, Security &amp; Retention</h2>
+
+    <h3>Where data is stored</h3>
+    <ul>
+      <li><strong>Supabase servers:</strong> Data centers in the Mumbai region (India) where available; otherwise Singapore.</li>
+      <li><strong>Your device:</strong> Local encrypted storage for offline access.</li>
     </ul>
 
-    <h3>🔧 How We Use Your Information</h3>
+    <h3>Security measures</h3>
     <ul>
-      <li>To deliver citizen services (grievance redressal, appointments, welfare schemes)</li>
-      <li>To enable AI‑powered assistance (via Google Gemini API)</li>
-      <li>To ensure security and prevent misuse</li>
-      <li>To communicate updates or respond to your queries</li>
+      <li><strong>Encryption in transit:</strong> All communication uses HTTPS/TLS 1.2+.</li>
+      <li><strong>Encryption at rest:</strong> Sensitive fields (Aadhaar) are encrypted at rest.</li>
+      <li><strong>Row-Level Security (RLS):</strong> Database policies restrict access on a need-to-know basis.</li>
+      <li><strong>Role-based access:</strong> Only authorised constituency staff can view grievance data.</li>
     </ul>
 
-    <h3>🤖 Google Gemini AI & Third‑Party Services</h3>
-    <p>We may send anonymised text prompts to Gemini API for generating suggestions or auto‑replies. No personal identifiers are shared. Other third parties: Firebase (authentication, database), Google Maps (location picker).</p>
+    <h3>Retention</h3>
+    <ul>
+      <li>Account data: retained while your account is active. Deleted within 30 days of a valid deletion request.</li>
+      <li>After <strong>24 months of inactivity</strong>, we anonymise or delete your account data, except where retention is required by law.</li>
+      <li>Grievance records: retained for <strong>5 years</strong> as required by government audit rules (anonymised after account deletion).</li>
+      <li>Crash logs and analytics: retained for <strong>90 days</strong>.</li>
+    </ul>
+  </div>
 
-    <h3>🔐 Data Storage & Security</h3>
-    <p>Your data is stored securely on Firebase servers and your device. We use encryption in transit and at rest. You can request deletion of your data by contacting us.</p>
+  <div class="card">
+    <h2>✅ Your Rights</h2>
+    <ul>
+      <li><strong>Access</strong> your data — view it in the App under Profile.</li>
+      <li><strong>Correct</strong> your data — edit it in the App under Profile.</li>
+      <li><strong>Delete</strong> your account and data — see <a href="/delete-account.html">yarlagadda.best/delete-account.html</a> or email <a href="mailto:mlasofficegannavaram@gmail.com">mlasofficegannavaram@gmail.com</a>. Processed within 30 days.</li>
+      <li><strong>Withdraw consent</strong> — by deleting your account or revoking permissions in device settings.</li>
+      <li><strong>Lodge a complaint</strong> — with our Grievance Officer or with the Data Protection Board of India.</li>
+    </ul>
+  </div>
 
-    <h3>📧 Contact for Privacy Concerns</h3>
-    <p>If you have any questions or wish to delete your data, email us at <strong>mlasofficegannavaram@gmail.com</strong>.</p>
+  <div class="card">
+    <h2>📞 Grievance Officer (DPDP Act, 2023)</h2>
+    <p>In accordance with India's Digital Personal Data Protection Act, 2023, our Grievance Officer is:</p>
+    <p>
+      <strong>[Name — to be filled by MLA Office]</strong><br>
+      Designation: Grievance Officer, MLA Office Gannavaram<br>
+      Address: MLA Office, Gannavaram, Krishna District, Andhra Pradesh – 521101<br>
+      Email: <a href="mailto:mlasofficegannavaram@gmail.com">mlasofficegannavaram@gmail.com</a><br>
+      Phone: +91-8985098999<br>
+      Response: acknowledged within 7 days; resolved within 30 days.
+    </p>
+  </div>
+
+  <div class="card">
+    <h2>👶 Children's Privacy</h2>
+    <p>The App is not intended for children under 13. We do not knowingly collect data from children under 13. If you believe a child has provided us data, contact us and we will delete it.</p>
+  </div>
+
+  <div class="card">
+    <h2>🔗 Third-Party Links</h2>
+    <p>The App may link to external websites (e.g., government portals). We are not responsible for the privacy practices of those sites. Please review their policies separately.</p>
+  </div>
+
+  <div class="card">
+    <h2>🤖 AI-Generated Content</h2>
+    <p>The App uses Google Gemini to generate summaries, reels, chat responses, and form auto-fill suggestions. AI-generated content is labelled with an <em>"AI-generated"</em> badge. AI does not make decisions that affect your legal rights — final grievance decisions are made by human administrators.</p>
+  </div>
+
+  <div class="card">
+    <h2>🇮🇳 Political Content Disclaimer</h2>
+    <p>The App displays content related to the Gannavaram constituency's development activities. The App is <strong>not affiliated with any political party</strong>. All political content is user-submitted or sourced from public records.</p>
+  </div>
+
+  <div class="card">
+    <h2>🔄 Changes to This Policy</h2>
+    <p>We may update this policy. The "Last updated" date at the top reflects changes. Material changes will be notified in-app or via email. Continued use after changes means you accept the updated policy.</p>
+  </div>
+
+  <div class="card">
+    <h2>📧 Contact Us</h2>
+    <p>
+      <strong>MLA Office Gannavaram</strong><br>
+      MLA Office, Gannavaram, Krishna District, Andhra Pradesh – 521101, India<br>
+      Email: <a href="mailto:mlasofficegannavaram@gmail.com">mlasofficegannavaram@gmail.com</a><br>
+      Phone: +91-8985098999
+    </p>
     <a href="/" class="btn">← Back to Homepage</a>
   </div>
+
 </div>
 <div class="footer">
   <p>© 2026 Yarlagadda App. All rights reserved.</p>
-  <p><a href="/">Home</a> | <a href="/terms.html">Terms of Service</a></p>
+  <p>
+    <a href="/">Home</a> |
+    <a href="/privacy.html">Privacy Policy</a> |
+    <a href="/terms.html">Terms of Service</a> |
+    <a href="/delete-account.html">Delete Account</a>
+  </p>
 </div>
 </body>
 </html>
